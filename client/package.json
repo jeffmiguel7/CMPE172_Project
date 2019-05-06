@@ -22,7 +22,7 @@
     "semantic-ui-react": "^0.77.1"
   },
   "scripts": {
-    "start": "cross-env PORT=443 react-scripts start",
+    "start": "cross-env PORT=3000 react-scripts start",
     "build": "react-scripts build",
     "test": "echo 'Tests not yet implemented' && exit 1",
     "eject": "react-scripts eject",
