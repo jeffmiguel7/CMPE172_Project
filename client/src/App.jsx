@@ -15,7 +15,7 @@ class App extends Component {
         <Security
           issuer= 'https://dev-630184.okta.com/oauth2/default'
           client_id='0oaiftouz20k2Xk6A356'
-          redirect_uri='http://localhost:443/implicit/callback'
+          redirect_uri='http://ec2-3-83-154-192.compute-1.amazonaws.com:3000/implicit/callback'
         >
           <Navbar />
           <Container text style={{ marginTop: '7em' }}>
