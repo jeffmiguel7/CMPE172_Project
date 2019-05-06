@@ -59,7 +59,7 @@ class Salaries extends Component {
 
   /**new */
   getEmployees = () => {
-    fetch('http://localhost:4000/employees')
+    fetch('http://ec2-3-83-154-192.compute-1.amazonaws.com:4000/employees')
       .then(response => response.json())
       .then(response => this.setState({ emps: response.data} ))
       .catch(err => console.error(err))
@@ -74,7 +74,7 @@ class Salaries extends Component {
 
   searchSalaries = () => {
     const{salary} = this.state;
-    fetch(`http://localhost:4000/salaries/search?emp_no=${salary.emp_no}`)
+    fetch(`http://ec2-3-83-154-192.compute-1.amazonaws.com:4000/salaries/search?emp_no=${salary.emp_no}`)
       .then(response => response.json())
       .then(response => this.setState({ storesalaries: response.data} ))
       .catch(err => console.error(err))
@@ -82,7 +82,7 @@ class Salaries extends Component {
 
   deleteSalaries = () => {
     const{salary} = this.state;
-    fetch(`http://localhost:4000/salaries/delete?emp_no=${salary.emp_no}&from_date=${salary.from_date}`)
+    fetch(`http://ec2-3-83-154-192.compute-1.amazonaws.com:4000/salaries/delete?emp_no=${salary.emp_no}&from_date=${salary.from_date}`)
       .then(response => response.json)
       .then(this.deletesalary)
       .then(this.searchSalaries)
@@ -91,7 +91,7 @@ class Salaries extends Component {
 
   addSalaries = () => {
     const{salary} = this.state;
-    fetch(`http://localhost:4000/salaries/add?emp_no=${salary.emp_no}&salary=${salary.salary}`)
+    fetch(`http://ec2-3-83-154-192.compute-1.amazonaws.com:4000/salaries/add?emp_no=${salary.emp_no}&salary=${salary.salary}`)
       .then(response => response.json)
       .then(this.addsalary)
       .then(this.searchSalaries)
@@ -100,7 +100,7 @@ class Salaries extends Component {
 
   searchUser = () => {
     const{salary} = this.state;
-    fetch(`http://localhost:4000/employees/search?emp_no=${salary.emp_no}`)
+    fetch(`http://ec2-3-83-154-192.compute-1.amazonaws.com:4000/employees/search?emp_no=${salary.emp_no}`)
       .then(response => response.json())
       .then(response => this.setState({ storeemployees: response.data} ))
       .catch(err => console.error(err))
